@@ -1,0 +1,25 @@
+{
+  "name": "mapflux-nextjs-example",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@mapflux/core": "workspace:*",
+    "@mapflux/provider-ors": "workspace:*",
+    "@mapflux/geocoder": "workspace:*",
+    "@mapflux/react": "workspace:*",
+    "leaflet": "^1.9.4",
+    "react-leaflet": "^4.2.1",
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.0",
+    "typescript": "^5.5.0"
+  }
+}

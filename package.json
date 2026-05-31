@@ -1,0 +1,32 @@
+{
+  "name": "mapflux",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Open-source routing and mapping infrastructure toolkit for low-cost production apps.",
+  "license": "MIT",
+  "author": "MapFlux Contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/mapflux"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "changeset": "changeset",
+    "release": "turbo run build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.0",
+    "turbo": "^2.0.0",
+    "typescript": "^5.5.0",
+    "tsup": "^8.0.0",
+    "vitest": "^2.0.0"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  }
+}

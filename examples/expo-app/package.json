@@ -1,0 +1,23 @@
+{
+  "name": "mapflux-expo-example",
+  "version": "0.0.0",
+  "private": true,
+  "main": "App.tsx",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios"
+  },
+  "dependencies": {
+    "@mapflux/core": "workspace:*",
+    "@mapflux/provider-ors": "workspace:*",
+    "@mapflux/react-native": "workspace:*",
+    "expo": "~51.0.0",
+    "react": "^18.2.0",
+    "react-native": "^0.74.0",
+    "react-native-maps": "^1.8.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  }
+}
