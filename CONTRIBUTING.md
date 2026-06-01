@@ -24,7 +24,7 @@ your-fork/feature/my-feature
 Fork from GitHub, then clone:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/mapflux.git
+git clone https://github.com/Dev-folabi/mapflux.git
 cd mapflux
 git checkout develop
 ```
