@@ -6,38 +6,38 @@ Thank you for considering contributing! This document explains how to get starte
 
 ```
 main (production — published to npm)
-  ↑ PR (reviewed, CI passes)
-staging (integration — all PRs target here)
+  ↑ PR (maintainers only)
+develop (integration — all contributions land here)
   ↑ PR (from your fork)
-your-fork/feature-branch
+your-fork/feature/my-feature
 ```
 
 - **`main`** — stable, published releases only. Never push directly.
-- **`staging`** — integration branch. All contributions go here first.
-- Contributors **fork from `staging`** and submit PRs back to `staging`.
-- Maintainers merge `staging` → `main` for releases.
+- **`develop`** — integration branch. All contributions go here.
+- Contributors **fork the repo**, branch from `develop`, and open PRs back to `develop`.
+- Maintainers merge `develop` → `main` for releases.
 
 ## How to Contribute
 
 ### 1. Fork the repo
 
-Fork from the **`staging`** branch (not `main`).
-
-### 2. Clone your fork
+Fork from GitHub, then clone:
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/mapflux.git
 cd mapflux
-git checkout staging
+git checkout develop
 ```
 
-### 3. Create a feature branch
+### 2. Create a feature branch
+
+Branch from `develop` with the `feature/` prefix:
 
 ```bash
-git checkout -b feat/my-feature
+git checkout -b feature/my-feature
 ```
 
-### 4. Set up development
+### 3. Set up development
 
 ```bash
 pnpm install
@@ -45,21 +45,21 @@ pnpm build
 pnpm test
 ```
 
-### 5. Make your changes
+### 4. Make your changes
 
 - Write code
 - Add tests
 - Run `pnpm test` to verify
 
-### 6. Submit a PR
+### 5. Submit a PR
 
-Push your branch and open a PR **targeting `staging`** (not `main`).
+Push your branch and open a PR **targeting `develop`**:
 
 ```bash
-git push origin feat/my-feature
+git push origin feature/my-feature
 ```
 
-Then open a PR: `your-fork:feat/my-feature` → `mapflux:staging`
+Then open a PR: `your-fork:feature/my-feature` → `mapflux:develop`
 
 ---
 
@@ -119,8 +119,8 @@ test(core): add deduplication edge case tests
 
 ### Pull Request Checklist
 
-- [ ] Branch created from `staging`
-- [ ] PR targets `staging` (not `main`)
+- [ ] Branch created from `develop` with `feature/` prefix
+- [ ] PR targets `develop` (not `main`)
 - [ ] Tests added for new functionality
 - [ ] `pnpm test` passes
 - [ ] `pnpm build` succeeds
@@ -146,12 +146,12 @@ test(core): add deduplication edge case tests
 
 ## CI/CD
 
-CI runs on every push and PR to both `staging` and `main`:
+CI runs on every push and PR to both `develop` and `main`:
 
 - Builds all packages
 - Runs all tests
 - Tests against Node 18, 20, and 22
-- Publishes to npm only from `main` (after staging → main merge)
+- Publishes to npm only from `main` (after develop → main merge)
 
 ---
 

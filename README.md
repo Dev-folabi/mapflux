@@ -208,11 +208,11 @@ MIT — use it however you want, commercially or otherwise.
 
 ## Contributing
 
-We use a **staging branch** workflow:
+We use a **develop branch** workflow:
 
-1. Fork from `staging` (not `main`)
-2. Create your feature branch
-3. Submit PR targeting `staging`
+1. Fork the repo
+2. Branch from `develop` as `feature/your-feature`
+3. Submit PR targeting `develop`
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
 
